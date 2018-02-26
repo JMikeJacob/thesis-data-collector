@@ -1,10 +1,8 @@
 var express = require('express')
 var app = express()
+var port = 5000
 
-// app.get('/', function(req, res) {
-//   res.send('Hello World!')
-// });
+var gather = require('./controllers/gather-resource')
+app.use('/gather', gather)
 
-app.listen(5000, function() {
-  console.log('Example app listening on port 3000!')
-});
+app.listen(port)
