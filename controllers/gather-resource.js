@@ -9,11 +9,19 @@ router.post('/', (req, res) => {
     var lat = req.body.Latitude
     var long = req.body.Longitude
 
+    var dataRow = []
+    dataRow.push(lat)
+    dataRow.push(long)
+    dataRow.push(PGA)
+    dataRow.push(PGV)
+    dataRow.push(PGD)
+    dataRow.concat(disp)
+
     res.send('Hello World')
 })
 
 router.get('/', (req,res) => {
-    res.send('It FUCKING works!!')
+    res.send('TODO')
 })
 
 module.exports = router
