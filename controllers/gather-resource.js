@@ -16,7 +16,7 @@ router.post('/', (req, res) => {
     var dataRow = { Latitude, Longitude, PGA, PGV, PGD, Displacement }
     
     writer.pipe(fs.createWriteStream('Not_earthquakes.csv', { flags: 'a' }))
-    writer.write({dataRow})
+    writer.write(dataRow)
     writer.end()
 
     res.send('Finished')
