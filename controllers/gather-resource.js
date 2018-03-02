@@ -1,10 +1,9 @@
 var router = require('express').Router()
 
 router.post('/', (req, res) => {
-    var fs = require('fs');
+    console.log('Data received.')
+    var fs = require('fs')
     var csvWriter = require('csv-write-stream')
-
-    console.log(req.body)
 
     const headers = [
         'lat','long', 'pga', 'pgd', 'pgv',
