@@ -4,6 +4,8 @@ router.post('/', (req, res) => {
     var fs = require('fs');
     var csvWriter = require('csv-write-stream')
 
+    console.log(req.body)
+
     const headers = [
         'lat','long', 'pga', 'pgd', 'pgv',
         'T0.050S', 'T0.100S', 'T0.150S', 'T0.200S', 'T0.250S',
