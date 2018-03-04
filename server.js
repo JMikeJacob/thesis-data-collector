@@ -9,7 +9,7 @@ app.use(bodyParser.json())
 
 app.use('/gather', gather)
 
-var port = process.env.port || 5000
+var port = process.env.PORT || 5000
 
 app.listen(port, () => {
   console.log('App running at port:', port)
